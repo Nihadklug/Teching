@@ -1,0 +1,220 @@
+
+/*GardenX project*/
+@media screen and (max-width: 747px){
+  .imagetext{
+    position: relative !important;
+    color: black !important;
+    left: 0 !important;
+    margin-top: 40px !important;
+  }
+  .triangcontent{
+    padding-top: 0px !important;
+
+  }
+  .font18{
+    font-size: 18px !important;
+  }
+  .triangle{
+    display: none;
+    visibility: hidden;
+  }
+  .mt40{
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 748px){
+  .imagetext{
+    top: 24% !important;
+    left: 62px !important;
+   }
+  .make8{
+    flex: 0 0 66.666667% !important;
+    max-width: 66.666667% !important;
+  }
+  .triangcontent{
+    padding-top: 20px !important;
+  }
+  .makecenter {
+    display: flex;
+    padding-top: 30px !important;
+  }
+  .foont{
+    font-size: 11px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px){
+
+  .imagetext{
+    top: 18% !important;
+    left: 62px !important;
+   }
+  .make8{
+    flex: 0 0 66.666667% !important;
+    max-width: 66.666667% !important;
+  }
+  .triangcontent{
+    padding-top: 20px !important;
+  }
+  .makecenter {
+    display: flex;
+    padding-top: 30px !important;
+  }
+}
+.triangcontent{
+  padding-top: 80px;
+}
+.makecenter{
+  display: flex;
+  padding-top: 20px;
+}
+.mt40{
+  margin-top: -40px;
+  align-items: center;
+}
+.triangle{
+  width: 35px; 
+  height: 70px;
+}
+.foont{
+  font-size: 18px;
+}
+.container-fluid{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.gardeen{
+  padding-top: 118px;
+}
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Husu{
+  display: inline-block;
+  max-width: 98%;
+  height: auto;
+  width: 100%;
+  margin: 1%;
+}
+figure {
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-size: smaller;
+  text-indent: 0;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+.imagetext{
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  color: white;
+
+}
+/*NoteFixation Project*/
+.Husu2{
+  display: inline-block;
+  max-width: 98%;
+  height: 185px;
+  width: 100%;
+  margin: 1%;
+}
+.fixcontent{
+  color: #006E63;
+}
+.fixcontent1{
+  color: #151515;
+}
+.buynow{
+  width: 200px;
+  border: none;
+  background-image: linear-gradient(#00A79D, #37748F);
+  color: white;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.pddtop{
+  padding-top: 10px;
+}
+.buynow:hover{
+  transform: scale(1.2);
+
+}
+.imagetext1{
+  position: absolute;
+  top: 45%;
+  left: 100px;
+  height: 400px;
+  color: white;
+
+}
+@media screen and (max-width: 768px) and (min-width: 748px){
+  .foont{
+    font-size: 11px !important;
+  }
+  .imagetext1{
+    top: 18% !important;
+    left: 72px !important;
+   }
+   .buynow{
+    width: 100px !important;
+   }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px){
+  .imagetext1{
+    top: 18% !important;
+    left: 72px !important;
+   }
+}
+/* Comfortab Project*/
+
+.imagetext2{
+  position: absolute;
+  top: 45%;
+  left: 100px;
+  height: 400px;
+  color: white;
+  color: #000000;
+
+}
+.comcontent{
+  padding-top: 20%;
+  padding-left: 40px;
+}
+.Husu1{
+  display: inline-block;
+  max-width: 98%;
+  height: 245px;
+  width: 100%;
+  margin: 1%;
+}
+/*CarsPLus Project*/
+.imagetext3{
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  height: 400px;
+  color: white;
+  color: #000000;
+
+}
+.cardcontent{
+  padding-left: 30px;
+}

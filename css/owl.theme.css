@@ -1,0 +1,57 @@
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    color: grey !important;
+}
+@media only screen and (max-width: 768px) {
+	.item
+	{
+		height: 193px !important;
+	}
+
+} 
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+	.item
+	{
+		height: 153px !important;
+	}
+
+} 
+@media only screen and (max-width: 600px) {
+	.item
+	{
+		height: 400px !important;
+	}
+} 
+@media only screen and (max-width: 414px) {
+	.item
+	{
+		height: 295px !important;
+	}
+} 
+@media only screen and (max-width: 411px) and (min-width: 376px) {
+	.item
+	{
+		height: 299px !important;
+	}
+
+} 
+@media only screen and (max-width: 360px) and (min-width: 321px) {
+	.item
+	{
+		height: 251px !important;
+	}
+
+} 
+@media only screen and (max-width: 375px) and (min-width: 361px) {
+	.item
+	{
+		height: 259px !important;
+	}
+
+} 
+@media only screen and (max-width: 320px)  {
+	.item
+	{
+		height: 216px !important;
+	}
+
+} 

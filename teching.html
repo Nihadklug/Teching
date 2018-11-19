@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Teching</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta name="description" content=""> -->
+  <meta name="author" content="Ulviyya Imamova and Nihad Ismayilzada ">
+  <link rel="stylesheet"  href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/teching.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script type="text/javascript" src="js/teching.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgOHhRvj-A9qV2gDPKm4tdq_9E8dPgmwU&callback=initMap"
+  type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+
+        
+<script type="text/javascript">
+
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 1000); 
+        return false; 
+    }); 
+});
+
+
+$(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop();
+  $('.foractive').each(function(i) {
+        if ($(this).position().top - 120 <= scrollDistance) {
+            $('.navbar a.active').removeClass('active');
+            $('.navbar a').eq(i+1).addClass('active');
+        }
+    });
+}).scroll();
+
+
+$( () => {
+  //Click Logo To Scroll To Top
+
+  $('#logo').on('click', () => {
+
+    $('html,body').animate({
+
+      scrollTop: 0
+
+    },500);
+
+  });
+
+   
+
+  //Smooth Scrolling Using Navigation Menu
+
+  $('a[href*="#"]').on('click', function(e){
+
+    $('html,body').animate({
+
+      scrollTop: $($(this).attr('href')).offset().top - 118
+
+    },500);
+
+    e.preventDefault();
+  });
+  //Toggle Menu
+  $('#menu-toggle').on('click', () => {
+    $('#menu-toggle').toggleClass('closeMenu');
+    $('ul').toggleClass('showMenu');
+    $('li').on('click', () => {
+      $('ul').removeClass('showMenu');
+      $('#menu-toggle').removeClass('closeMenu');
+    });
+  });
+});
+
+
+           
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                var mapOptions = {
+                    zoom: 12,
+                    center: new google.maps.LatLng(40.396485, 49.835474), 
+                    styles: [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]
+                };
+                var mapElement = document.getElementById('map');
+                var map = new google.maps.Map(mapElement, mapOptions);
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.396485, 49.835474),
+                    map:map,
+                    title: 'Snazzy!'
+                });
+            }
+
+
+
+</script>
+</head>
+
+<body>
+
+<!-- "Back to top" smooth scroll -->
+
+<a href="#" id="scroll"><span><img src="imgs/btt.png"></span> </a>
+
+
+<!-- Navbar here -->
+<div class="container-fluid">
+      <nav class="navbar navbar-expand-xl fixed-top navbar-light bg-white text-center " id="mainNav">
+        <a class="navbar-brand" href="#"><img src="imgs/Logo.png" class="logoo"></a>
+        <button class="navbar-toggler fl" type="button" data-toggle="collapse" data-target="#collapsingNavbarLg" aria-controls="collapsingNavbarLg" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+          <div class="collapse navbar-collapse" id="collapsingNavbarLg">
+            <div class="col-lg-9 col-md-12 for100">
+            <ul class="nav navbar-nav">
+              <li class="nav-item navnav1">
+                <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item navnav1">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item navnav1">
+                <a class="nav-link " href="#products">Products</a>
+              </li>
+              <li class="nav-item navnav1">
+                <a class="nav-link" href="#partners">Partners</a>
+              </li>
+              <li class="nav-item navnav1">
+                <a class="nav-link" href="#privacy">Privacy Policy</a>
+              </li>
+              <li class="nav-item navnav1">
+                <a class="nav-link" href="#contact">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-12  for100 d-flex justify-content-end">
+            <div class="collapse navbar-collapse " id="collapsingNavbarLg">
+                <ul class="navbar-nav">
+                  <li class="nav-item navnav">
+                    <a class="icn nav-link" href="https://twitter.com/techinger_" target="_blank"><img class="icns" src="imgs/twitter.png"></a>
+                  </li>
+                  <li class="nav-item navnav">
+                    <a class="icn nav-link" href="https://www.facebook.com/techinger/" target="_blank"><img class="icnsf" src="imgs/facebook.png"></a>
+                  </li>
+                  <li class="nav-item navnav">
+                    <a class="icn nav-link" href="https://www.linkedin.com/company/teching/" target="_blank"><img class="icns" src="imgs/Linkedin.png"></a>
+                  </li>
+                  <li class="nav-item navnav">
+                    <a class="icn nav-link" href="https://www.instagram.com/techinger/" target="_blank"><img class="icns insta" src="imgs/instagram.png"></a>
+                  </li>
+                  <li class="nav-item navnav"><a class="icn nav-link" href="http://techingdigitalstudio.com/" target="_blank"><button class="button" type="button">Teching Service</button></a></li>
+              </ul>
+            </div>
+        </div>
+      </nav>
+</div>
+
+<!-- "About" section here -->
+<div class="container foractive about" id="about">
+    <div class="column">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12 font-size"><p class="float-lg-right bout m1 animated bounceInLeft"> Who we are</p></div>
+          <div class="offset-lg-1 col-lg-6 col-md-6 col-sm-12 font-size  animated bounceInRight">The company of technology and innovasion main ambition is to realize our thougts and to change other people’s life with innovations around us.The main issue of our activity is based on technological process.To change the world for us begins changing our surroindings thoughts and the style of our mentality.<br>
+            <br>
+
+          Mission-The main corporative mission is to create new innovasions which technology gives us and to change the sense ability of ours and people. The main including fields:mechatronic, robotic systems mobile programme web and web, Software products,electronics and electronic improvement. Our target is to be the leading member in the global emporium in the future.</div>
+        </div>
+      </div>
+      <div class="w-83 line"></div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12 font-size"><p class="float-lg-right bout m2 animated bounceInLeft">Company <br> Profile</p></div>
+          <div class="offset-lg-1 col-lg-6 col-md-6 col-sm-12 font-size animated bounceInRight">
+            <div class="row">
+              <div class=" col-lg-4 text-center companyprofile " ><a href="http://techingdigitalstudio.com/" target="_blank"><img  class="cmpimgs"  src="imgs/digitalstudio.png"></a></div>
+              <div class="col-lg-4  text-center  companyprofile"><a href="#" target="_blank"><img class="cmpimgs"  src="imgs/gamestudio.png"></a></div>
+              <div class="col-lg-4  text-center  companyprofile"><a href="#" target="_blank"><img class="cmpimgs" src="imgs/Dynamincs.png"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>       
+      <div class="line"></div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12 font-size"><p class="float-lg-right bout m3 animated bounceInLeft">What we do</p></div>
+          <div class="offset-lg-1 col-lg-6 col-md-6 col-sm-12 font-size animated bounceInRight">We do not adapt our innovative ideas to anyone or anything, innnovation is the solution that circle has emerged.  Technology is something we cannot despise as an individual, company or country. We also play our role in the technological process. Our main goal is to turn the envionment and the country into a world of innovation, to increase export power and to provide the greatest support to the economy.
+          </div>
+        </div>       
+      </div> 
+    </div>
+</div>
+
+<!-- "Projects" section here -->
+
+<div class="container-fluid foractive projects" id="projects">
+
+    <div class="column w-100 centr">
+      <div class="col-12">
+        <h1 class="sectionname"> Projects</h1>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12 clearfix"> 
+            <div class="row correction">
+              <div class="offset-lg-1 col-lg-4 col-md-4 col-sm-12">
+                <div class="logos"><a href="http://kubirub.online/" target="_blank"><img class="kubirub" src="imgs/Kubirub.png"></a></div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="names"><a href="#" class="lnks"> KubiRub</a></h3>
+                <p class="info">“KubiRub”  (familiar to us as Rubik`s cube hand toy) will be launched as a 3D mobile game.
+                Users can enjoy not only playing and relaxing, but also obtain bonuses and discounts from different companies. The mobile game is based on the main principle of Rubik`s cube but the faces of cubes consist of logos of companies instead of colors.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 clearfix">
+            <div class="row correction">
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <a target="_blank" href="gardenx.html"><div class="logos"><img class="gardenx" src="imgs/GardenX.png"></div></a>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="names"><a href="#" class="lnks"> GardenX</a></h3>
+                <p class="info">GardenX is a smart plantpot that combines electronic and software solutions. With electronic components and sensors installed within soil, the pot provides autonomous watering of the plant according to its water level and sends the owner the necessary information on the plant via mobile application.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12 clearfix">
+            <div class="row correction">
+              <div class="offset-lg-1 col-lg-4 col-md-4 col-sm-12">
+                <a href="comfortap.html" target="_blank"><div class="logos"><img class="ComforTab" src="imgs/ComforTab.png"></div></a>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="names"><a href="#" class="lnks"> ComforTab</a></h3>
+                <p class="info">An innovative technological device, the ComforTab is a tablet that eases the working conditions of programmers and enables them to do programming anywhere they want to. Unlike other tablets, the ComforTab, which has 2 touchscreens, enables programmers to write codes on the first screen, while they see the codes on live preview on the second one. In other words, programmers will be able to do their work on one tablet anywhere instead of2-3 devices in one place.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 clearfix">
+            <div class="row correction">
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <a href="bottlecheck.html" target="_blank"><div class="logos"><img class="BottleCheck" src="imgs/BottleCheck.png"></div></a>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="names"><a href="#" class="lnks"> BottleCheck</a></h3>
+                <p class="info">The project offers solutions for water supply to individual and corporate customers. When the electronic sensors that measure the level of water within the bottle identifies the decrease, the system send a new order the suppliers, providing information on the address and the number of bottles needed. In addition to the order, the necessary payment is also carried out through this system.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12 clearfix">
+            <div class="row correction">
+              <div class="offset-lg-1 col-lg-4 col-md-4 col-sm-12">
+                <div class="logos"><img src="imgs/Velorator.png" class="Velorator"></div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="names"><a href="#" class="lnks"> VeloRator</a></h3>
+                <p class="info">Innovative equipment for house and offices, the Velorator helps working people to save not only time when doing sports, but also generate electricity by themselves. The Velorator users, while doing their exercise, can work on electronic devices powered by alternative energy. The Velorator mobile application provides users with the necessary static information.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 clearfix">
+            <div class="row correction">
+
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <a href="notefix.html" target="_blank"><div class="logos"><img src="imgs/notefix.png" class="notefix"></div></a>
+              </div>
+
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <h3 class="names"><a href="#" class="lnks"> NoteFixation</a></h3>
+                <p class="info">The new system which is using the smart wrist bracelet will make people’s life even much easier. By using the smart wrist bracelet, you can easily convert what you say into an electronic note and you can add it to your daily plans. So, you can simply make a list of things to do, including things to do at home and things to buy outside for your home. You can easily get in touch with your family members through this mobile application. You can get additional tasks or to-do lists from them and even you are able to edit these tasks. Additionally, there is a feature called System Deep Learning which creates a list of daily things to do and products to be purchased in terms of what you have done and purchased so far daily. The system are able to be operated by both wrist bracelet and mobile application independently.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   
+    </div>
+
+</div>
+
+<!-- "Products" section here -->
+<div class="container-fluid foractive" id="products">
+  <div class="columns">
+    <div class="col-12">
+      <h1 class="sectionname">Products</h1>
+    </div>
+    <div class="col-12">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="column w-90 centr">
+              <div class="col-12 text-center">
+                <h1 class="kubiname">KubiRub - Mobile Game</h1>          
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-lg-2 col-md-12 col-sm-12 ">
+                    <div class="column kubiphone">
+                      <div class="col-12 d-flex justify-content-center">
+                        <img src="imgs/phone.png" class="phone">
+                      </div>
+                      <div class="col-12 justify-content-center d-flex appstore ">
+                        <a href="https://itunes.apple.com/us/app/kubirub/id1421285507?mt=8" target="_blank"> <img class="store" src="imgs/appstore.png"></a>
+                      </div>
+                      <div class="col-12 justify-content-center d-flex ">
+                        <a href="https://play.google.com/store/apps/details?id=com.Teching.KubiRub" target="_blank"><img class="store" src="imgs/googleplay.png"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-10 col-md-12 col-sm-12 float-left pdng">
+                    <div class="column kubicontent" >
+                      <div class="col-12 ">
+                        <div class="row">
+                          <div class="col-lg-auto col-md-auto col-sm-12 font-size  formiddle">
+                            <p class="float-lg-left bout"> Who we are</p>
+                          </div>
+                          <div class="col-lg-7 col-md-7 col-sm-12 font14">The main distinctive feature of our Rubik’s Cube is that it holds logos of companies on its sides instead of colors and getting just one side of the Rubik’s Cube completed is enough to make players gain coupons and discounts from the chosen company. The companies will be able to manage all information about their coupons, activity status, sale strategies of the company's mobile gaming platform, brand or product promotion.</div>
+                          <div class="col-lg-2 col-md-2 col-sm-12">
+                            <img src="imgs/007.png" class="hidden correction1">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w-100 line"></div>
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-lg-auto col-md-auto col-sm-12 font-size formiddle"><p class="float-lg-left bout"> What we do</p></div>
+                          <div class="col-lg-7 col-md-7 col-sm-12 font14" >People are usually looking for discounts in stores. By means of our unified system, people will be able to get and apply discounts themselves. Companies nowadays as a result of technology development consider giving their quotes via quizzes more enjoyable rather than simply offering discounts to their customers. Users can improve their mental skills by “Kubirub" because it provides them with required information and helps them to meet their material needs.  Beyond of providing users with mental development it also helps them to meet their material needs.</div>
+                          <div class="col-lg-2 col-md-2 col-sm-12">
+                            <img class="correction2 hidden" src="imgs/company-app-son.png"  >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center text-center">
+                        <h5 class="visit">Visit to</h5>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center text-center">
+                        <a href="http://kubirub.online/" target="_blank"><button class="gotosite">Kubirub Official Website</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+        
+      </div>
+      <div class="carousel-item">
+        <div class="column w-90 centr">
+              <div class="col-12 text-center">
+                <h1 class="cardplus">CardPlus - Mobile Game</h1>          
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-lg-2 col-md-12 col-sm-12 ">
+                    <div class="column kubiphone">
+                      <div class="col-12 d-flex justify-content-center pdbottom">
+                        <img src="imgs/xsmax.png" class="xsmax">
+                      </div>
+                      <div class="col-12 justify-content-center d-flex appstore1 ">
+                        <a href="https://itunes.apple.com/us/app/kubirub/id1421285507?mt=8" target="_blank"> <img class="store" src="imgs/appstore.png"></a>
+                      </div>
+                      <div class="col-12 justify-content-center d-flex ">
+                        <a href="https://play.google.com/store/apps/details?id=com.Teching.CardPlus" target="_blank"><img class="store" src="imgs/googleplay.png"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-10 col-md-12 col-sm-12 float-left pdng">
+                    <div class="column cardcontent" >
+                      <div class="col-12 ">
+                        <div class="row">
+                          <div class="col-lg-auto col-md-auto col-sm-12 font-size  formiddle1">
+                            <p class="float-lg-left bout"> What is this</p>
+                          </div>
+                          <div class="col-lg-9 col-md-9 col-sm-12 font20">“CardPlus” is a simple addicted 2D mobile game. This mobile game consists of 9 uncolored cubes and when you tap one of these cubes you are able to see the color of the cube. The main idea is to get more scores by finding 3 same-colored cubes consequently. As it is seen, you need a bit success and logic in order to win the game. Enjoy it by downloading it from Google Play Store and AppStore.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span aria-hidden="true"><img src="imgs/Path 249.png"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span aria-hidden="true"><img src="imgs/Path 250.png"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- "Partners" section here -->
+<div class="row">
+<div class="container-fluid partners foractive" id="partners"> 
+  <h2 class="text-center sectionname">Partners</h2>
+  <p class="text-center">Our business & educational partners</p>
+  <div class="container-fluid">
+    <div class="wrapper">
+      <div class="owl-carousel owl-theme">
+        <div class="item "><a href="http://eazistart.org/" target="_blank"><img  class="logos1" src="imgs/eazystart.png"></a></div>
+        <div class="item"><a href="http://asoiu.edu.az/az" target="_blank"><img class="logos1"  src="imgs/adnsu.png"></a></div>
+        <div class="item"><a href="https://www.facebook.com/matrixtrainingcenter/" target="_blank"><img  class="logos1" src="imgs/matrix.png"></a></div>
+        <div class="item"><a href="https://www.facebook.com/codelaboratory/" target="_blank"><img  class="logos1" src="imgs/CodeLibrary.png"></a></div>
+        <div class="item"><a href="#" target="_blank"><img  class="logos1" src="imgs/forality.png"></a></div>
+        <div class="item"><a href="https://www.facebook.com/Az%C4%B0%C4%B0-Store-331989757630409/" target="_blank"><img class="logos1" src="imgs/aziistr.png"></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- "Privacy policy" section here -->
+
+<div class="container-fluid policy foractive" id="privacy">
+  <div class="row text-center">
+    <div class="col-md-12 col-sm-12">
+      <h2 class="sectionname">Privacy Policy</h2>
+      <p class="pr-pol-un">Read to our differently Privacy Policy’s, have a information & write be feedback it about.</p>
+    </div>
+    <div class="col-lg-12 col-sm-12 col-md-12">
+      <div class="unten-1">
+        <button onclick="goo('' ,this), func1()"  type="button" class="policybuttons"><p class="myButtons">Read our Partnership PP</p></button>
+      </div>
+    </div>
+    <div class="col-sm-11 col-md-11 col-lg-11 scrollingdiv " id="firstbutton">
+      <div class="line1 w-100"></div>   
+      <p class="contenthere">,<b>Our Partnership Privacy Policy</b><br>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>
+
+      Why do we use it?
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+      has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English. Many desktop publishing
+      packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy.
+      Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br><br>
+
+      Why do we use it?
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+      has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English. Many desktop publishing
+      packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy.
+      Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br><br>
+
+
+      Where does it come from?
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+      Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+      Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+      1.10.32 and 1.10.33 of “de Finibus Bonorum et Malorum” (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory
+      of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, “Lorem ipsum dolor sit amet..”, comes from a line in section 1.10.32.
+
+      </p>
+
+      <div class="line1 w-100"></div>
+      
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <div class="unten-1">
+        <button onclick="goo('' ,this), func2()" type="button" class="policybuttons"><p class="myButtons">Read our Customer PP</p></button>
+      </div>
+    </div>
+    <div class="col-sm-11 col-md-11 col-lg-11" id="secondbutton">
+      <div class="line1 w-100"></div>   
+      <p class="contenthere"><b>Our Customer Privacy Policy</b><br>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>
+
+      Why do we use it?
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+      has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English. Many desktop publishing
+      packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy.
+      Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br><br>
+
+
+      Where does it come from?
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+      Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+      Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+      1.10.32 and 1.10.33 of “de Finibus Bonorum et Malorum” (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory
+      of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, “Lorem ipsum dolor sit amet..”, comes from a line in section 1.10.32.
+      </p>
+
+      <div class="line1 w-100"></div>
+      
+    </div>
+    <div class="col-md-12 col-sm-12col-lg-12">
+      <div class="unten-1">
+        <button onclick="goo('' ,this), func3()" type="button" class="policybuttons"><p class="myButtons">Read our Transfer Technology PP</p></button>
+      </div>
+    </div>
+    <div class="col-sm-11 col-md-11 col-lg-11" id="thirdbutton">
+      <div class="line1 w-100"></div>   
+      <p class="contenthere"><b>Our Transfer Technology PP</b><br>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>
+
+      Why do we use it?
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+      has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English. Many desktop publishing
+      packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy.
+      Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br><br>
+
+
+      Where does it come from?
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+      Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+      Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+      1.10.32 and 1.10.33 of “de Finibus Bonorum et Malorum” (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory
+      of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, “Lorem ipsum dolor sit amet..”, comes from a line in section 1.10.32.
+      </p>
+
+      <div class="line1 w-100"></div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- "Contact" section here -->
+<div class="row color">
+<div class="partners contact container-fluid foractive" id="contact">
+  <div class="column justify-content-center">
+    <div class="col-12 text-center">
+      <h1 class="sectionname">Contacts</h1>
+    </div>
+    <div class="col-12 contact_section">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 offset-lg-2 col-sm-12">
+          <div class="column">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                  <h2 class="contactinfo">Location</h2>
+                </div>
+                <div class="offset-lg-1 col-lg-8 col-md-12 col-sm-12 contactinfoo">
+                  <p class="contactinfo1">Azadlig ave.16-21, Baku, Azerbaijan. <br>
+                  Postal code: AZ1010</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                  <h2 class="contactinfo">Phone</h2>
+                </div>
+                <div class="offset-lg-1 col-lg-8 col-md-8 col-sm-12 contactinfoo">
+                  <p class="contactinfo1">
+                    1) +994 50 364 84 93 <br>
+                    2) +994 55 753 19 35
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                  <h2 class="contactinfo">Mails</h2>
+                </div>
+                <div class="offset-lg-1 col-lg-8 col-md-12 col-sm-12 contactinfoo">
+                  <p class="contactinfo1">
+                    For information:       info@teching.co<br>
+                    Technical support:    support@teching.co<br>
+                    Career:                   career@teching.co<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 formclass">
+              <form action="/action_page.php" target="_blank" method="post">
+                <input type="text" name="email" class="email" placeholder="Contact us, write your email" required>
+                <input class="submit sbmt" type="submit" value="SEND">
+              </form>   
+            </div>
+          </div> 
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 map1" >
+          <div  class="map" id="map"></div>           
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="line w-80 footerline"></div>
+    <div class="copyright w-80 centr">© Teching Limited 2017 - 2018. All rights reserved.</div>
+  </div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 12,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.396485, 49.835474), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.396485, 49.835474),
+                    map:map,
+                    title: 'Snazzy!'
+                });
+            }
+
+</script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+
+</body>
+</html>
